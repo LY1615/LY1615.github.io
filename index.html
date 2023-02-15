@@ -277,7 +277,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-02-15 21:19:32" itemprop="dateModified" datetime="2023-02-15T21:19:32+08:00">2023-02-15</time>
+      <time title="修改时间：2023-02-15 22:07:11" itemprop="dateModified" datetime="2023-02-15T22:07:11+08:00">2023-02-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -302,9 +302,22 @@
           <h2 id="项目配置分析"><a href="#项目配置分析" class="headerlink" title="项目配置分析"></a>项目配置分析</h2><p>node_modules文件夹:项目依赖文件夹。</p>
 <p>public文件夹:一般放置一些静态资源(图片)，需要注意，放在public文件夹中的静态资源，webpack进行打包的时候会原封不动打包到dist文件夹中。</p>
 <p>src文件夹(源代码文件夹):<br>    assets文件夹:一般也是放置静态资源(一般放置多个组件共用的静态资源)，需要注意，放置在assest文件夹里面静态资源，webpack进行打包的时候会把静态资源当作一个模块，打包js文件里面。<br>    components文件夹:一般放置的是非路由组件(全局组件)。<br>    App.vue:唯一的根组件，vue当中的组件(.vue)<br>    main.js:程序的入口文件，也是整个程序当中最先执行的文件</p>
-<p>babel.config.js:配置文件(babel相关)</p>
-<p>package.json文件:记录配置信息</p>
-<p>package-lock.json:锁定安装版本的文件。保证包一致性版本。<br>README.md:说明文件。</p>
+<p>babel.config.js:配置文件(babel相关)。</p>
+<p>package.json文件:记录配置信息。</p>
+<p>package-lock.json:锁定安装版本的文件。保证包一致性版本。</p>
+<p>README.md:说明文件。</p>
+<h2 id="项目的-其他配置"><a href="#项目的-其他配置" class="headerlink" title="项目的 其他配置"></a>项目的 其他配置</h2><p>1.eslint纠错功能关闭:在vue.config.js里面配置这段代码。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="attr">lintOnSave</span>: <span class="literal">false</span> <span class="comment">//关闭语法检查</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>2.jsconfig.json:别名@提示 不能用在”node_modules”,”dist”文件中。</p>
+<h2 id="项目路由的分析"><a href="#项目路由的分析" class="headerlink" title="项目路由的分析"></a>项目路由的分析</h2><p>key:URL(地址栏中的路径)</p>
+<p>value:相应的路由组件</p>
+<p>注意：项目上中下结构</p>
+<p>路由组件:</p>
+<p>Home首页路由组件、Search路由组件、Login登录路由组件、Refister注册路由组件</p>
+<p>非路由组件:</p>
+<p>Header组件:首页、搜索页面</p>
+<p>Footer组件:首页、搜索页面，但是在 登录和注册页面没有</p>
 
       
     </div>

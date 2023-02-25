@@ -217,4 +217,38 @@
         <tag>笔记</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Promise笔记</title>
+    <url>/2022/10/23/Promise/</url>
+    <content><![CDATA[<h2 id="异步编程"><a href="#异步编程" class="headerlink" title="异步编程"></a>异步编程</h2><ul>
+<li>fs 文件操作</li>
+<li>数据库操作</li>
+<li>AJAX</li>
+<li>定时器</li>
+</ul>
+<h2 id="同步和异步"><a href="#同步和异步" class="headerlink" title="同步和异步"></a>同步和异步</h2><ul>
+<li>在js中，通常情况下代码都是同步执行的</li>
+<li>异步执行代码时，当遇到需要其他进程处理的工作时，js不需要等待，而是继续执行其他代码，直到其他进程处理完毕后js再继续之前的工作</li>
+<li>异步问题：1.不能直接通过return设置返回值(通过回调函数解决) 2.回调地狱(增加代码的复杂，不易维护)</li>
+<li>哪些代码执行速度慢1.向服务器发送请求的代码2.Ajax(异步的js和XML)</li>
+</ul>
+<h2 id="Promise的状态"><a href="#Promise的状态" class="headerlink" title="Promise的状态"></a>Promise的状态</h2><p>实例对象中的一个属性 PromiseState</p>
+<ul>
+<li>pending 未决定的</li>
+<li>resolved &#x2F; fullfilled 成功</li>
+<li>rejected 失败</li>
+</ul>
+<h2 id="Promise对象的值"><a href="#Promise对象的值" class="headerlink" title="Promise对象的值"></a>Promise对象的值</h2><p>实例对象中的另外一个属性 PromiseResult<br>保存对象成功和失败的结果</p>
+<ul>
+<li>resolve</li>
+<li>reject</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Promise</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+      </tags>
+  </entry>
 </search>

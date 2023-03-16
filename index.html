@@ -385,7 +385,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/15/%E5%B0%9A%E5%93%81%E6%B1%87%E9%A1%B9%E7%9B%AE%E7%AC%94%E8%AE%B0day01/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/15/%E5%B0%9A%E5%93%81%E6%B1%87%E9%A1%B9%E7%9B%AE%E7%AC%94%E8%AE%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -403,7 +403,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/02/15/%E5%B0%9A%E5%93%81%E6%B1%87%E9%A1%B9%E7%9B%AE%E7%AC%94%E8%AE%B0day01/" class="post-title-link" itemprop="url">尚品汇项目笔记day01</a>
+          <a href="/2023/02/15/%E5%B0%9A%E5%93%81%E6%B1%87%E9%A1%B9%E7%9B%AE%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">尚品汇项目笔记</a>
         </h2>
 
         <div class="post-meta-container">
@@ -421,7 +421,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-03-13 16:46:01" itemprop="dateModified" datetime="2023-03-13T16:46:01+08:00">2023-03-13</time>
+      <time title="修改时间：2023-03-16 08:54:44" itemprop="dateModified" datetime="2023-03-16T08:54:44+08:00">2023-03-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -443,11 +443,9 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="项目配置分析"><a href="#项目配置分析" class="headerlink" title="项目配置分析"></a>项目配置分析</h2><p>node_modules文件夹:项目依赖文件夹。</p>
-<p>public文件夹:一般放置一些静态资源(图片)，需要注意，放在public文件夹中的静态资源，webpack进行打包的时候会原封不动打包到dist文件夹中。</p>
+          <h2 id="项目配置分析"><a href="#项目配置分析" class="headerlink" title="项目配置分析"></a>项目配置分析</h2><p>node_modules文件夹:项目依赖文件夹。<br>public文件夹:一般放置一些静态资源(图片)，需要注意，放在public文件夹中的静态资源，webpack进行打包的时候会原封不动打包到dist文件夹中。</p>
 <p>src文件夹(源代码文件夹):<br>    assets文件夹:一般也是放置静态资源(一般放置多个组件共用的静态资源)，需要注意，放置在assest文件夹里面静态资源，webpack进行打包的时候会把静态资源当作一个模块，打包js文件里面。<br>    components文件夹:一般放置的是非路由组件(全局组件)。</p>
-<p>​	api文件：存放项目API</p>
-<p>​	App.vue:唯一的根组件，vue当中的组件(.vue)<br>​    main.js:程序的入口文件，也是整个程序当中最先执行的文件</p>
+<p>​	api文件：存放项目API<br>​	App.vue:唯一的根组件，vue当中的组件(.vue)<br>​    main.js:程序的入口文件，也是整个程序当中最先执行的文件</p>
 <p>babel.config.js:配置文件(babel相关)。</p>
 <p>package.json文件:记录配置信息。</p>
 <p>package-lock.json:锁定安装版本的文件。保证包一致性版本。</p>
@@ -456,18 +454,12 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="attr">lintOnSave</span>: <span class="literal">false</span> <span class="comment">//关闭语法检查</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>2.jsconfig.json:别名@提示 不能用在”node_modules”,”dist”文件中。</p>
-<h2 id="项目路由的分析"><a href="#项目路由的分析" class="headerlink" title="项目路由的分析"></a>项目路由的分析</h2><p>key:URL(地址栏中的路径)</p>
-<p>value:相应的路由组件</p>
-<p>注意：项目上中下结构</p>
-<p>路由组件:</p>
-<p>Home首页路由组件、Search路由组件、Login登录路由组件、Refister注册路由组件</p>
-<p>非路由组件:</p>
-<p>Header组件:首页、搜索页面</p>
-<p>Footer组件:首页、搜索页面，但是在 登录和注册页面没有</p>
-<h2 id="组件的使用（非路由组件）"><a href="#组件的使用（非路由组件）" class="headerlink" title="组件的使用（非路由组件）"></a>组件的使用（非路由组件）</h2><p>1.创建或者定义</p>
-<p>2.引入</p>
-<p>3.注册</p>
-<p>4.使用</p>
+<h2 id="项目路由的分析"><a href="#项目路由的分析" class="headerlink" title="项目路由的分析"></a>项目路由的分析</h2><ul>
+<li>key:URL(地址栏中的路径)</li>
+<li>value:相应的路由组件</li>
+</ul>
+<p>注意：项目上中下结构<br>路由组件:<br>Home首页路由组件、Search路由组件、Login登录路由组件、Refister注册路由组件<br>非路由组件:<br>Header组件:首页、搜索页面<br>Footer组件:首页、搜索页面，但是在 登录和注册页面没有</p>
+<h2 id="组件的使用（非路由组件）"><a href="#组件的使用（非路由组件）" class="headerlink" title="组件的使用（非路由组件）"></a>组件的使用（非路由组件）</h2><p>1.创建或者定义<br>2.引入<br>3.注册<br>4.使用</p>
 <h2 id="路由组件的搭建"><a href="#路由组件的搭建" class="headerlink" title="路由组件的搭建"></a>路由组件的搭建</h2><p>1.components文件夹：一般放置的是非路由组件(共用全局组件)</p>
 <p>2.pages | views文件夹：一般放置的是路由组件</p>
 <p>3.项目当中配置的路由一般放置在router文件中</p>
@@ -492,7 +484,7 @@
 <p>​      不同点：call传递参数用逗号隔开，apply方法执行，传递数组</p>
 <h2 id="路由传参"><a href="#路由传参" class="headerlink" title="路由传参"></a>路由传参</h2><p>1.params参数：属于路径当中的一部分，需要注意，在配置路由的时候，需要占位</p>
 <p>2.query参数：不属于路径当中的一部分，类似于ajax的queryString，例子：&#x2F;home?k&#x3D;1&amp;kv&#x3D;2，不需要占位</p>
-<h2 id="模块拆分"><a href="#模块拆分" class="headerlink" title="模块拆分"></a>模块拆分</h2><p>1.先把静态页面完成</p>
+<h2 id="静态页面模块拆分"><a href="#静态页面模块拆分" class="headerlink" title="静态页面模块拆分"></a>静态页面模块拆分</h2><p>1.先把静态页面完成</p>
 <p>2.拆分出静态组件</p>
 <p>3.获取服务器的数据进行展示</p>
 <p>4.动态业务</p>
@@ -504,6 +496,19 @@
 <p>3.接口统一管理</p>
 <p>项目很小：完全可以在组件的生命周期函数中发请求</p>
 <p>项目很大：axios.get(“xxx”)</p>
+<h2 id="Vuex状态管理库"><a href="#Vuex状态管理库" class="headerlink" title="Vuex状态管理库"></a>Vuex状态管理库</h2><p>1.Vuex是什么？</p>
+<ul>
+<li><p>Vuex是官方提供一个插件，状态管理库，集中式管理项目中组件共用的数据</p>
+</li>
+<li><p>2.Vuex实现模块式开发</p>
+</li>
+<li><p>如果项目过大，组件过多，接口有很多，数据也很多，可以让Vuex实现模块式开发</p>
+</li>
+</ul>
+<h2 id="节流和防抖"><a href="#节流和防抖" class="headerlink" title="节流和防抖"></a>节流和防抖</h2><ul>
+<li>节流：连续触发事件但是在 n 秒中只执行一次函数。(就是技能CD,CD没好,你用不了技能)</li>
+<li>防抖：触发事件后 n 秒后才执行函数，如果在 n 秒内又触发了事件，则会重新计算函数执行时间。(就是回城,被打断就要重新来)</li>
+</ul>
 
       
     </div>

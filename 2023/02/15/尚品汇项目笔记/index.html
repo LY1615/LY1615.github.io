@@ -27,7 +27,7 @@
 <meta property="og:description" content="项目配置分析node_modules文件夹:项目依赖文件夹。public文件夹:一般放置一些静态资源(图片)，需要注意，放在public文件夹中的静态资源，webpack进行打包的时候会原封不动打包到dist文件夹中。 src文件夹(源代码文件夹):    assets文件夹:一般也是放置静态资源(一般放置多个组件共用的静态资源)，需要注意，放置在assest文件夹里面静态资源，webpack进行">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-02-15T13:12:59.985Z">
-<meta property="article:modified_time" content="2023-03-16T00:54:44.095Z">
+<meta property="article:modified_time" content="2023-03-20T09:21:48.796Z">
 <meta property="article:author" content="远">
 <meta property="article:tag" content="笔记">
 <meta name="twitter:card" content="summary">
@@ -113,7 +113,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%B9%E7%9B%AE%E9%85%8D%E7%BD%AE%E5%88%86%E6%9E%90"><span class="nav-number">1.</span> <span class="nav-text">项目配置分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%B9%E7%9B%AE%E7%9A%84-%E5%85%B6%E4%BB%96%E9%85%8D%E7%BD%AE"><span class="nav-number">2.</span> <span class="nav-text">项目的 其他配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%B9%E7%9B%AE%E8%B7%AF%E7%94%B1%E7%9A%84%E5%88%86%E6%9E%90"><span class="nav-number">3.</span> <span class="nav-text">项目路由的分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%84%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8%EF%BC%88%E9%9D%9E%E8%B7%AF%E7%94%B1%E7%BB%84%E4%BB%B6%EF%BC%89"><span class="nav-number">4.</span> <span class="nav-text">组件的使用（非路由组件）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B7%AF%E7%94%B1%E7%BB%84%E4%BB%B6%E7%9A%84%E6%90%AD%E5%BB%BA"><span class="nav-number">5.</span> <span class="nav-text">路由组件的搭建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B7%AF%E7%94%B1%E7%9A%84%E8%B7%B3%E8%BD%AC"><span class="nav-number">6.</span> <span class="nav-text">路由的跳转</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%96%E7%A8%8B%E5%BC%8F%E5%AF%BC%E8%88%AA%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">7.</span> <span class="nav-text">编程式导航的问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B7%AF%E7%94%B1%E4%BC%A0%E5%8F%82"><span class="nav-number">8.</span> <span class="nav-text">路由传参</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E9%A1%B5%E9%9D%A2%E6%A8%A1%E5%9D%97%E6%8B%86%E5%88%86"><span class="nav-number">9.</span> <span class="nav-text">静态页面模块拆分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A5%E5%8F%A3"><span class="nav-number">10.</span> <span class="nav-text">接口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vuex%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86%E5%BA%93"><span class="nav-number">11.</span> <span class="nav-text">Vuex状态管理库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%8A%82%E6%B5%81%E5%92%8C%E9%98%B2%E6%8A%96"><span class="nav-number">12.</span> <span class="nav-text">节流和防抖</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%B9%E7%9B%AE%E9%85%8D%E7%BD%AE%E5%88%86%E6%9E%90"><span class="nav-number">1.</span> <span class="nav-text">项目配置分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%B9%E7%9B%AE%E7%9A%84-%E5%85%B6%E4%BB%96%E9%85%8D%E7%BD%AE"><span class="nav-number">2.</span> <span class="nav-text">项目的 其他配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%B9%E7%9B%AE%E8%B7%AF%E7%94%B1%E7%9A%84%E5%88%86%E6%9E%90"><span class="nav-number">3.</span> <span class="nav-text">项目路由的分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%84%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8%EF%BC%88%E9%9D%9E%E8%B7%AF%E7%94%B1%E7%BB%84%E4%BB%B6%EF%BC%89"><span class="nav-number">4.</span> <span class="nav-text">组件的使用（非路由组件）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B7%AF%E7%94%B1%E7%BB%84%E4%BB%B6%E7%9A%84%E6%90%AD%E5%BB%BA"><span class="nav-number">5.</span> <span class="nav-text">路由组件的搭建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B7%AF%E7%94%B1%E7%9A%84%E8%B7%B3%E8%BD%AC"><span class="nav-number">6.</span> <span class="nav-text">路由的跳转</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%96%E7%A8%8B%E5%BC%8F%E5%AF%BC%E8%88%AA%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">7.</span> <span class="nav-text">编程式导航的问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B7%AF%E7%94%B1%E4%BC%A0%E5%8F%82"><span class="nav-number">8.</span> <span class="nav-text">路由传参</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E9%A1%B5%E9%9D%A2%E6%A8%A1%E5%9D%97%E6%8B%86%E5%88%86"><span class="nav-number">9.</span> <span class="nav-text">静态页面模块拆分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A5%E5%8F%A3"><span class="nav-number">10.</span> <span class="nav-text">接口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vuex%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86%E5%BA%93"><span class="nav-number">11.</span> <span class="nav-text">Vuex状态管理库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%8A%82%E6%B5%81%E5%92%8C%E9%98%B2%E6%8A%96"><span class="nav-number">12.</span> <span class="nav-text">节流和防抖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A8%E7%94%BB%E5%92%8C%E8%BF%87%E6%B8%A1"><span class="nav-number">13.</span> <span class="nav-text">动画和过渡</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mock%E6%95%B0%E6%8D%AE-%E6%A8%A1%E6%8B%9F"><span class="nav-number">14.</span> <span class="nav-text">mock数据(模拟)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#swiper%E6%8A%80%E6%9C%AF%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="nav-number">15.</span> <span class="nav-text">swiper技术的使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vue-nextTick"><span class="nav-number">16.</span> <span class="nav-text">vue.nextTick</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -205,7 +205,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-03-16 08:54:44" itemprop="dateModified" datetime="2023-03-16T08:54:44+08:00">2023-03-16</time>
+      <time title="修改时间：2023-03-20 17:21:48" itemprop="dateModified" datetime="2023-03-20T17:21:48+08:00">2023-03-20</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -290,9 +290,24 @@
 </li>
 </ul>
 <h2 id="节流和防抖"><a href="#节流和防抖" class="headerlink" title="节流和防抖"></a>节流和防抖</h2><ul>
-<li>节流：连续触发事件但是在 n 秒中只执行一次函数。(就是技能CD,CD没好,你用不了技能)</li>
-<li>防抖：触发事件后 n 秒后才执行函数，如果在 n 秒内又触发了事件，则会重新计算函数执行时间。(就是回城,被打断就要重新来)</li>
+<li><p>节流：连续触发事件但是在 n 秒中只执行一次函数。(就是技能CD,CD没好,你用不了技能)</p>
+</li>
+<li><p>防抖：触发事件后 n 秒后才执行函数，如果在 n 秒内又触发了事件，则会重新计算函数执行时间。(就是回城,被打断就要重新来)</p>
+</li>
 </ul>
+<h2 id="动画和过渡"><a href="#动画和过渡" class="headerlink" title="动画和过渡"></a>动画和过渡</h2><p>过渡动画：前提组件 | 元素必须要有v-if | v-show指令才可以进行过渡动画</p>
+<h2 id="mock数据-模拟"><a href="#mock数据-模拟" class="headerlink" title="mock数据(模拟)"></a>mock数据(模拟)</h2><p>使用mock：</p>
+<p>1.下载插件 npm install mockjs</p>
+<p>2.在项目当中src文件夹中创建mock文件夹</p>
+<p>3.在mock文件夹下准备JSON数据(记得格式化)</p>
+<p>4.把mock数据需要的图片放到public文件夹中(在打包的时候public会原封不动的打包到dist文件夹中)</p>
+<p>5.创建mockServe.js通过mockjs插件实现模拟数据</p>
+<p>6.mockServe.js文件在入口文件中引入(至少需要执行一次，才能模拟数据)</p>
+<h2 id="swiper技术的使用"><a href="#swiper技术的使用" class="headerlink" title="swiper技术的使用"></a>swiper技术的使用</h2><p>1.引包(js和css)文件，npm使用：npm i swiper@5</p>
+<p>2.页面结构必须要有</p>
+<p>3.必须在页面结构中有的情况下，再初始化Swiper</p>
+<h2 id="vue-nextTick"><a href="#vue-nextTick" class="headerlink" title="vue.nextTick"></a>vue.nextTick</h2><p>nextTick：在下次 DOM 更新循环结束之后执行延迟回调。在修改数据之后立即使用这个方法，获取更新后的 DOM。</p>
+<p>nextTick：可以保证页面中的解构一定有的，经常和很多插件一样使用(都需要DOM存在了)</p>
 
     </div>
 

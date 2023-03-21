@@ -224,94 +224,32 @@
   <entry>
     <title>尚品汇项目笔记</title>
     <url>/2023/02/15/%E5%B0%9A%E5%93%81%E6%B1%87%E9%A1%B9%E7%9B%AE%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h2 id="项目配置分析"><a href="#项目配置分析" class="headerlink" title="项目配置分析"></a>项目配置分析</h2><p>node_modules文件夹:项目依赖文件夹。<br>public文件夹:一般放置一些静态资源(图片)，需要注意，放在public文件夹中的静态资源，webpack进行打包的时候会原封不动打包到dist文件夹中。</p>
-<p>src文件夹(源代码文件夹):<br>    assets文件夹:一般也是放置静态资源(一般放置多个组件共用的静态资源)，需要注意，放置在assest文件夹里面静态资源，webpack进行打包的时候会把静态资源当作一个模块，打包js文件里面。<br>    components文件夹:一般放置的是非路由组件(全局组件)。</p>
-<p>​	api文件：存放项目API<br>​	App.vue:唯一的根组件，vue当中的组件(.vue)<br>​    main.js:程序的入口文件，也是整个程序当中最先执行的文件</p>
-<p>babel.config.js:配置文件(babel相关)。</p>
-<p>package.json文件:记录配置信息。</p>
-<p>package-lock.json:锁定安装版本的文件。保证包一致性版本。</p>
-<p>README.md:说明文件。</p>
+    <content><![CDATA[<h2 id="项目配置分析"><a href="#项目配置分析" class="headerlink" title="项目配置分析"></a>项目配置分析</h2><p>node_modules文件夹:项目依赖文件夹。<br>public文件夹:一般放置一些静态资源(图片)，需要注意，放在public文件夹中的静态资源，webpack进行打包的时候会原封不动打包到dist文件夹中。<br>src文件夹(源代码文件夹):<br>assets文件夹:一般也是放置静态资源(一般放置多个组件共用的静态资源)，需要注意，放置在assest文件夹里面静态资源，webpack进行打包的时候会把静态资源当作一个模块，打包js文件里面。<br>components文件夹:一般放置的是非路由组件(全局组件)。<br>api文件：存放项目API<br>App.vue:唯一的根组件，vue当中的组件(.vue)<br>main.js:程序的入口文件，也是整个程序当中最先执行的文件<br>babel.config.js:配置文件(babel相关)。<br>package.json文件:记录配置信息。<br>package-lock.json:锁定安装版本的文件。保证包一致性版本。<br>README.md:说明文件。</p>
 <h2 id="项目的-其他配置"><a href="#项目的-其他配置" class="headerlink" title="项目的 其他配置"></a>项目的 其他配置</h2><p>1.eslint纠错功能关闭:在vue.config.js里面配置这段代码。</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="attr">lintOnSave</span>: <span class="literal">false</span> <span class="comment">//关闭语法检查</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>2.jsconfig.json:别名@提示 不能用在”node_modules”,”dist”文件中。</p>
-<h2 id="项目路由的分析"><a href="#项目路由的分析" class="headerlink" title="项目路由的分析"></a>项目路由的分析</h2><ul>
-<li>key:URL(地址栏中的路径)</li>
-<li>value:相应的路由组件</li>
-</ul>
-<p>注意：项目上中下结构<br>路由组件:<br>Home首页路由组件、Search路由组件、Login登录路由组件、Refister注册路由组件<br>非路由组件:<br>Header组件:首页、搜索页面<br>Footer组件:首页、搜索页面，但是在 登录和注册页面没有</p>
+<h2 id="项目路由的分析"><a href="#项目路由的分析" class="headerlink" title="项目路由的分析"></a>项目路由的分析</h2><p>key:URL(地址栏中的路径)<br>value:相应的路由组件<br>注意：项目上中下结构<br>路由组件:<br>Home首页路由组件、Search路由组件、Login登录路由组件、Refister注册路由组件<br>非路由组件:<br>Header组件:首页、搜索页面<br>Footer组件:首页、搜索页面，但是在 登录和注册页面没有</p>
 <h2 id="组件的使用（非路由组件）"><a href="#组件的使用（非路由组件）" class="headerlink" title="组件的使用（非路由组件）"></a>组件的使用（非路由组件）</h2><p>1.创建或者定义<br>2.引入<br>3.注册<br>4.使用</p>
-<h2 id="路由组件的搭建"><a href="#路由组件的搭建" class="headerlink" title="路由组件的搭建"></a>路由组件的搭建</h2><p>1.components文件夹：一般放置的是非路由组件(共用全局组件)</p>
-<p>2.pages | views文件夹：一般放置的是路由组件</p>
-<p>3.项目当中配置的路由一般放置在router文件中</p>
-<p>4.$route:一般获取路由信息[路径，query，params等等]</p>
-<p>5.$router:一般进行编程式导航进行路由跳转[push | replace]</p>
-<p>6.路由组件还是非路由组件身上都有$route和$router</p>
-<h2 id="路由的跳转"><a href="#路由的跳转" class="headerlink" title="路由的跳转"></a>路由的跳转</h2><p>1.声明式导航router-link，可以进行路由的跳转</p>
-<p>2.编程式导航$router.push | replace，可以进行路由的跳转</p>
-<p>3.声明式导航：声明式导航能做的，编程式导航都能做，但是编程式导航除了可以进行路由跳转，还可以做一些其他的业务逻辑</p>
-<p>4.配置路由的时候，可以给路由添加元信息[meta],路由需要配置对象，它的key不能随便写</p>
-<p>5.声明式导航没有：当跳转到当前路由参数不变的时候，多次执行会产生NavigationDuplicated报错？</p>
-<h2 id="编程式导航的问题"><a href="#编程式导航的问题" class="headerlink" title="编程式导航的问题"></a>编程式导航的问题</h2><p>1.当跳转到当前路由参数不变的时候，多次执行会产生NavigationDuplicated报错？而声明式导航没有</p>
-<p>答：</p>
-<p>1.1.原因：”vue-router”: “^3.5.3”：引入了promise</p>
-<p>1.2.this：当前组件实例(search)</p>
-<p>this.$router属性：当前的这个属性，属性值VueRouter类的一个实例，当在入口文件注册路由的时候，给组件实例添加$router | $router</p>
-<p>push：VueRouter类的一个实例</p>
-<p>1.3.解决方法1：重写originPush和originReplace方法</p>
-<p>解决方法2：直接在this.$router.push写成功和失败的回调</p>
-<p> 1.4.call || apply区别</p>
-<p>​      相同点：都可以调用函数一次，都可以篡改函数的上下文一次</p>
-<p>​      不同点：call传递参数用逗号隔开，apply方法执行，传递数组</p>
-<h2 id="路由传参"><a href="#路由传参" class="headerlink" title="路由传参"></a>路由传参</h2><p>1.params参数：属于路径当中的一部分，需要注意，在配置路由的时候，需要占位</p>
-<p>2.query参数：不属于路径当中的一部分，类似于ajax的queryString，例子：&#x2F;home?k&#x3D;1&amp;kv&#x3D;2，不需要占位</p>
-<h2 id="静态页面模块拆分"><a href="#静态页面模块拆分" class="headerlink" title="静态页面模块拆分"></a>静态页面模块拆分</h2><p>1.先把静态页面完成</p>
-<p>2.拆分出静态组件</p>
-<p>3.获取服务器的数据进行展示</p>
-<p>4.动态业务</p>
-<p>5.注意：HTML + CSS + 图片资源，缺一不可，一定要细心</p>
-<h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><p>1.常用的方式</p>
-<p>XMLHttpRequest，fetch，jq，axios</p>
-<p>2.为什么需要进行二次封装axios？</p>
-<p>请求拦截器，响应拦截器：请求拦截器，可以在发送请求之前处理一些业务，响应拦截器，当服务器数据返回以后，可以处理一些业务</p>
-<p>3.接口统一管理</p>
-<p>项目很小：完全可以在组件的生命周期函数中发请求</p>
-<p>项目很大：axios.get(“xxx”)</p>
+<h2 id="路由组件的搭建"><a href="#路由组件的搭建" class="headerlink" title="路由组件的搭建"></a>路由组件的搭建</h2><p>1.components文件夹：一般放置的是非路由组件(共用全局组件)<br>2.pages | views文件夹：一般放置的是路由组件<br>3.项目当中配置的路由一般放置在router文件中<br>4.$route:一般获取路由信息[路径，query，params等等]<br>5.$router:一般进行编程式导航进行路由跳转[push | replace]<br>6.路由组件还是非路由组件身上都有$route和$router</p>
+<h2 id="路由的跳转"><a href="#路由的跳转" class="headerlink" title="路由的跳转"></a>路由的跳转</h2><p>1.声明式导航router-link，可以进行路由的跳转<br>2.编程式导航$router.push | replace，可以进行路由的跳转<br>3.声明式导航：声明式导航能做的，编程式导航都能做，但是编程式导航除了可以进行路由跳转，还可以做一些其他的业务逻辑<br>4.配置路由的时候，可以给路由添加元信息[meta],路由需要配置对象，它的key不能随便写<br>5.声明式导航没有：当跳转到当前路由参数不变的时候，多次执行会产生NavigationDuplicated报错？</p>
+<h2 id="编程式导航的问题"><a href="#编程式导航的问题" class="headerlink" title="编程式导航的问题"></a>编程式导航的问题</h2><p>1.当跳转到当前路由参数不变的时候，多次执行会产生NavigationDuplicated报错？而声明式导航没有<br>答：<br>1.1.原因：”vue-router”: “^3.5.3”：引入了promise<br>1.2.this：当前组件实例(search)<br>this.$router属性：当前的这个属性，属性值VueRouter类的一个实例，当在入口文件注册路由的时候，给组件实例添加$router | $router<br>push：VueRouter类的一个实例<br>1.3.解决方法1：重写originPush和originReplace方法<br>解决方法2：直接在this.$router.push写成功和失败的回调<br>1.4.call || apply区别<br>相同点：都可以调用函数一次，都可以篡改函数的上下文一次<br>不同点：call传递参数用逗号隔开，apply方法执行，传递数组</p>
+<h2 id="路由传参"><a href="#路由传参" class="headerlink" title="路由传参"></a>路由传参</h2><p>1.params参数：属于路径当中的一部分，需要注意，在配置路由的时候，需要占位<br>2.query参数：不属于路径当中的一部分，类似于ajax的queryString，例子：&#x2F;home?k&#x3D;1&amp;kv&#x3D;2，不需要占位</p>
+<h2 id="静态页面模块拆分"><a href="#静态页面模块拆分" class="headerlink" title="静态页面模块拆分"></a>静态页面模块拆分</h2><p>1.先把静态页面完成<br>2.拆分出静态组件<br>3.获取服务器的数据进行展示<br>4.动态业务<br>5.注意：HTML + CSS + 图片资源，缺一不可，一定要细心</p>
+<h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><p>1.常用的方式<br>XMLHttpRequest，fetch，jq，axios<br>2.为什么需要进行二次封装axios？<br>请求拦截器，响应拦截器：请求拦截器，可以在发送请求之前处理一些业务，响应拦截器，当服务器数据返回以后，可以处理一些业务<br>3.接口统一管理<br>项目很小：完全可以在组件的生命周期函数中发请求<br>项目很大：axios.get(“xxx”)</p>
 <h2 id="Vuex状态管理库"><a href="#Vuex状态管理库" class="headerlink" title="Vuex状态管理库"></a>Vuex状态管理库</h2><p>1.Vuex是什么？</p>
 <ul>
-<li><p>Vuex是官方提供一个插件，状态管理库，集中式管理项目中组件共用的数据</p>
-</li>
-<li><p>2.Vuex实现模块式开发</p>
-</li>
-<li><p>如果项目过大，组件过多，接口有很多，数据也很多，可以让Vuex实现模块式开发</p>
-</li>
+<li>Vuex是官方提供一个插件，状态管理库，集中式管理项目中组件共用的数据<br>2.Vuex实现模块式开发</li>
+<li>如果项目过大，组件过多，接口有很多，数据也很多，可以让Vuex实现模块式开发</li>
 </ul>
 <h2 id="节流和防抖"><a href="#节流和防抖" class="headerlink" title="节流和防抖"></a>节流和防抖</h2><ul>
-<li><p>节流：连续触发事件但是在 n 秒中只执行一次函数。(就是技能CD,CD没好,你用不了技能)</p>
-</li>
-<li><p>防抖：触发事件后 n 秒后才执行函数，如果在 n 秒内又触发了事件，则会重新计算函数执行时间。(就是回城,被打断就要重新来)</p>
-</li>
+<li>节流：连续触发事件但是在 n 秒中只执行一次函数。(就是技能CD,CD没好,你用不了技能)</li>
+<li>防抖：触发事件后 n 秒后才执行函数，如果在 n 秒内又触发了事件，则会重新计算函数执行时间。(就是回城,被打断就要重新来)</li>
 </ul>
 <h2 id="动画和过渡"><a href="#动画和过渡" class="headerlink" title="动画和过渡"></a>动画和过渡</h2><p>过渡动画：前提组件 | 元素必须要有v-if | v-show指令才可以进行过渡动画</p>
-<h2 id="mock数据-模拟"><a href="#mock数据-模拟" class="headerlink" title="mock数据(模拟)"></a>mock数据(模拟)</h2><p>使用mock：</p>
-<p>1.下载插件 npm install mockjs</p>
-<p>2.在项目当中src文件夹中创建mock文件夹</p>
-<p>3.在mock文件夹下准备JSON数据(记得格式化)</p>
-<p>4.把mock数据需要的图片放到public文件夹中(在打包的时候public会原封不动的打包到dist文件夹中)</p>
-<p>5.创建mockServe.js通过mockjs插件实现模拟数据</p>
-<p>6.mockServe.js文件在入口文件中引入(至少需要执行一次，才能模拟数据)</p>
-<h2 id="swiper技术的使用"><a href="#swiper技术的使用" class="headerlink" title="swiper技术的使用"></a>swiper技术的使用</h2><p>1.引包(js和css)文件，npm使用：npm i swiper@5</p>
-<p>2.页面结构必须要有</p>
-<p>3.必须在页面结构中有的情况下，再初始化Swiper</p>
-<h2 id="vue-nextTick"><a href="#vue-nextTick" class="headerlink" title="vue.nextTick"></a>vue.nextTick</h2><p>nextTick：在下次 DOM 更新循环结束之后执行延迟回调。在修改数据之后立即使用这个方法，获取更新后的 DOM。</p>
-<p>nextTick：可以保证页面中的解构一定有的，经常和很多插件一样使用(都需要DOM存在)</p>
-<p> v-for也可以在自定义标签当中使用</p>
-<h2 id="组件通信的方式-面试频率高"><a href="#组件通信的方式-面试频率高" class="headerlink" title="组件通信的方式(面试频率高)"></a>组件通信的方式(面试频率高)</h2><p>消息订阅发布（全能） ：，</p>
-<p>全局事件总线（全能）：$bus，</p>
-<p>props（父传子组件通信）：，:属性名&#x3D;”属性值”，props使用的是属性名(写法：数组，对象，函数)</p>
-<p>自定义事件（子传父通信）：@on @emit，</p>
-<p>插槽：，</p>
-<p>vuex：，</p>
+<h2 id="mock数据-模拟"><a href="#mock数据-模拟" class="headerlink" title="mock数据(模拟)"></a>mock数据(模拟)</h2><p>使用mock：<br>1.下载插件 npm install mockjs<br>2.在项目当中src文件夹中创建mock文件夹<br>3.在mock文件夹下准备JSON数据(记得格式化)<br>4.把mock数据需要的图片放到public文件夹中(在打包的时候public会原封不动的打包到dist文件夹中)<br>5.创建mockServe.js通过mockjs插件实现模拟数据<br>6.mockServe.js文件在入口文件中引入(至少需要执行一次，才能模拟数据)</p>
+<h2 id="swiper技术的使用"><a href="#swiper技术的使用" class="headerlink" title="swiper技术的使用"></a>swiper技术的使用</h2><p>1.引包(js和css)文件，npm使用：npm i swiper@5<br>2.页面结构必须要有<br>3.必须在页面结构中有的情况下，再初始化Swiper</p>
+<h2 id="vue-nextTick"><a href="#vue-nextTick" class="headerlink" title="vue.nextTick"></a>vue.nextTick</h2><p>nextTick：在下次 DOM 更新循环结束之后执行延迟回调。在修改数据之后立即使用这个方法，获取更新后的 DOM。<br>nextTick：可以保证页面中的解构一定有的，经常和很多插件一样使用(都需要DOM存在)<br>v-for也可以在自定义标签当中使用</p>
+<h2 id="组件通信的方式-面试频率高"><a href="#组件通信的方式-面试频率高" class="headerlink" title="组件通信的方式(面试频率高)"></a>组件通信的方式(面试频率高)</h2><p>消息订阅发布（全能） ：，<br>全局事件总线（全能）：$bus，<br>props（父传子组件通信）：，:属性名&#x3D;”属性值”，props使用的是属性名(写法：数组，对象，函数)<br>自定义事件（子传父通信）：@on @emit，<br>插槽：，<br>vuex：，</p>
 ]]></content>
       <categories>
         <category>Vue</category>

@@ -304,7 +304,14 @@
 <p>2.页面结构必须要有</p>
 <p>3.必须在页面结构中有的情况下，再初始化Swiper</p>
 <h2 id="vue-nextTick"><a href="#vue-nextTick" class="headerlink" title="vue.nextTick"></a>vue.nextTick</h2><p>nextTick：在下次 DOM 更新循环结束之后执行延迟回调。在修改数据之后立即使用这个方法，获取更新后的 DOM。</p>
-<p>nextTick：可以保证页面中的解构一定有的，经常和很多插件一样使用(都需要DOM存在了)</p>
+<p>nextTick：可以保证页面中的解构一定有的，经常和很多插件一样使用(都需要DOM存在)</p>
+<p> v-for也可以在自定义标签当中使用</p>
+<h2 id="组件通信的方式-面试频率高"><a href="#组件通信的方式-面试频率高" class="headerlink" title="组件通信的方式(面试频率高)"></a>组件通信的方式(面试频率高)</h2><p>消息订阅发布（全能） ：，</p>
+<p>全局事件总线（全能）：$bus，</p>
+<p>props（父传子组件通信）：，:属性名&#x3D;”属性值”，props使用的是属性名(写法：数组，对象，函数)</p>
+<p>自定义事件（子传父通信）：@on @emit，</p>
+<p>插槽：，</p>
+<p>vuex：，</p>
 ]]></content>
       <categories>
         <category>Vue</category>

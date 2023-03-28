@@ -146,7 +146,7 @@
 </ol>
 </li>
 <li>标准DOM事件<ol>
-<li>举例： click，input。。。</li>
+<li>举例： click，input</li>
 <li>事件名固定的，事件由浏览器触发</li>
 </ol>
 </li>
@@ -250,7 +250,9 @@
 <h2 id="mock数据-模拟"><a href="#mock数据-模拟" class="headerlink" title="mock数据(模拟)"></a>mock数据(模拟)</h2><p>使用mock：<br>1.下载插件 npm install mockjs<br>2.在项目当中src文件夹中创建mock文件夹<br>3.在mock文件夹下准备JSON数据(记得格式化)<br>4.把mock数据需要的图片放到public文件夹中(在打包的时候public会原封不动的打包到dist文件夹中)<br>5.创建mockServe.js通过mockjs插件实现模拟数据<br>6.mockServe.js文件在入口文件中引入(至少需要执行一次，才能模拟数据)</p>
 <h2 id="swiper技术的使用"><a href="#swiper技术的使用" class="headerlink" title="swiper技术的使用"></a>swiper技术的使用</h2><p>1.引包(js和css)文件，npm使用：npm i swiper@5<br>2.页面结构必须要有<br>3.必须在页面结构中有的情况下，再初始化Swiper</p>
 <h2 id="vue-nextTick"><a href="#vue-nextTick" class="headerlink" title="vue.nextTick"></a>vue.nextTick</h2><p>nextTick：在下次 DOM 更新循环结束之后执行延迟回调。在修改数据之后立即使用这个方法，获取更新后的 DOM。<br>nextTick：可以保证页面中的解构一定有的，经常和很多插件一样使用(都需要DOM存在)<br>v-for也可以在自定义标签当中使用</p>
-<h2 id="组件通信的方式-面试频率高"><a href="#组件通信的方式-面试频率高" class="headerlink" title="组件通信的方式(面试频率高)"></a>组件通信的方式(面试频率高)</h2><p>消息订阅发布（全能） ：，<br>全局事件总线（全能）：$bus，<br>props（父传子组件通信）：，:属性名&#x3D;”属性值”，props使用的是属性名(写法：数组，对象，函数)<br>自定义事件（子传父通信）：@on @emit，<br>插槽：，<br>vuex：，</p>
+<h2 id="组件通信的方式-面试频率高"><a href="#组件通信的方式-面试频率高" class="headerlink" title="组件通信的方式(面试频率高)"></a>组件通信的方式(面试频率高)</h2><p>消息订阅发布（全能） ：，<br>全局事件总线（全能）：$bus，<br>props（父传子组件通信）：，:属性名&#x3D;”属性值”，props使用的是属性名(写法：数组，对象，函数)<br>自定义事件（子传父通信）：@自定义名称  @emit，<br>插槽：，<br>vuex：，</p>
+<h2 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h2><p>升序就是从小到大。<br>降序就是从大到小。</p>
+<h2 id="分页器"><a href="#分页器" class="headerlink" title="分页器"></a>分页器</h2><p>1.为什么需要分页器?<br>当后台传入了大量的数据，那么在前端拿到数据，如果直接展示很有可能或造成卡顿，同时消耗过多的内存，给用户带来的浏览效果就不好。<br>2.需要知道什么?<br>需要知道当前是第几个：pageNo字段代表当前页数<br>需要知道每一个需要展示多少条数据：pageSize字段进行代表<br>需要知道整个分页器一共有多少条数据：total字段进行代表<br>需要知道分页器连续页码个数：continues字段进行代表<br>为什么是5 | 7[奇数]?因为对称好看<br>3.总页数&#x3D;总数据量&#x2F;每页展示数量</p>
 ]]></content>
       <categories>
         <category>Vue</category>

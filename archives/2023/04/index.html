@@ -19,28 +19,23 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.14.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="异步编程 fs 文件操作 数据库操作 AJAX 定时器  同步和异步 在js中，通常情况下代码都是同步执行的 异步执行代码时，当遇到需要其他进程处理的工作时，js不需要等待，而是继续执行其他代码，直到其他进程处理完毕后js再继续之前的工作 异步问题：1.不能直接通过return设置返回值(通过回调函数解决) 2.回调地狱(增加代码的复杂，不易维护) 哪些代码执行速度慢1.向服务器发送请求的代码2.">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Promise笔记">
-<meta property="og:url" content="http://example.com/2022/10/23/Promise/index.html">
+    <meta property="og:type" content="website">
+<meta property="og:title" content="远的个人博客">
+<meta property="og:url" content="http://example.com/archives/2023/04/index.html">
 <meta property="og:site_name" content="远的个人博客">
-<meta property="og:description" content="异步编程 fs 文件操作 数据库操作 AJAX 定时器  同步和异步 在js中，通常情况下代码都是同步执行的 异步执行代码时，当遇到需要其他进程处理的工作时，js不需要等待，而是继续执行其他代码，直到其他进程处理完毕后js再继续之前的工作 异步问题：1.不能直接通过return设置返回值(通过回调函数解决) 2.回调地狱(增加代码的复杂，不易维护) 哪些代码执行速度慢1.向服务器发送请求的代码2.">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-10-23T10:36:53.864Z">
-<meta property="article:modified_time" content="2023-02-25T14:20:31.315Z">
 <meta property="article:author" content="远">
-<meta property="article:tag" content="笔记">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/2022/10/23/Promise/">
+<link rel="canonical" href="http://example.com/archives/2023/04/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2022/10/23/Promise/","path":"2022/10/23/Promise/","title":"Promise笔记"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"archives/2023/04/index.html","title":""}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Promise笔记 | 远的个人博客</title>
+<title>归档 | 远的个人博客</title>
   
 
 
@@ -73,7 +68,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <p class="site-title">远的个人博客</p>
+      <h1 class="site-title">远的个人博客</h1>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">永远相信美好的事情即将发生</p>
@@ -100,7 +95,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -113,7 +108,6 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B"><span class="nav-number">1.</span> <span class="nav-text">异步编程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8C%E6%AD%A5%E5%92%8C%E5%BC%82%E6%AD%A5"><span class="nav-number">2.</span> <span class="nav-text">同步和异步</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Promise%E7%9A%84%E7%8A%B6%E6%80%81"><span class="nav-number">3.</span> <span class="nav-text">Promise的状态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Promise%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%80%BC"><span class="nav-number">4.</span> <span class="nav-text">Promise对象的值</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -158,129 +152,49 @@
 
     </div>
 
-    <div class="main-inner post posts-expand">
+    <div class="main-inner archive posts-collapse">
 
 
   
-
-
-<div class="post-block">
   
   
+  <div class="post-block">
+    <div class="post-content">
+      <div class="collection-title">
+        <span class="collection-header">嗯..! 目前共计 6 篇日志。 继续努力。</span>
+      </div>
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/23/Promise/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="远">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="远的个人博客">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Promise笔记 | 远的个人博客">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          Promise笔记
-        </h1>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-10-23 18:36:53" itemprop="dateCreated datePublished" datetime="2022-10-23T18:36:53+08:00">2022-10-23</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-02-25 22:20:31" itemprop="dateModified" datetime="2023-02-25T22:20:31+08:00">2023-02-25</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Promise/" itemprop="url" rel="index"><span itemprop="name">Promise</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-        <h2 id="异步编程"><a href="#异步编程" class="headerlink" title="异步编程"></a>异步编程</h2><ul>
-<li>fs 文件操作</li>
-<li>数据库操作</li>
-<li>AJAX</li>
-<li>定时器</li>
-</ul>
-<h2 id="同步和异步"><a href="#同步和异步" class="headerlink" title="同步和异步"></a>同步和异步</h2><ul>
-<li>在js中，通常情况下代码都是同步执行的</li>
-<li>异步执行代码时，当遇到需要其他进程处理的工作时，js不需要等待，而是继续执行其他代码，直到其他进程处理完毕后js再继续之前的工作</li>
-<li>异步问题：1.不能直接通过return设置返回值(通过回调函数解决) 2.回调地狱(增加代码的复杂，不易维护)</li>
-<li>哪些代码执行速度慢1.向服务器发送请求的代码2.Ajax(异步的js和XML)</li>
-</ul>
-<h2 id="Promise的状态"><a href="#Promise的状态" class="headerlink" title="Promise的状态"></a>Promise的状态</h2><p>实例对象中的一个属性 PromiseState</p>
-<ul>
-<li>pending 未决定的</li>
-<li>resolved &#x2F; fullfilled 成功</li>
-<li>rejected 失败</li>
-</ul>
-<h2 id="Promise对象的值"><a href="#Promise对象的值" class="headerlink" title="Promise对象的值"></a>Promise对象的值</h2><p>实例对象中的另外一个属性 PromiseResult<br>保存对象成功和失败的结果</p>
-<ul>
-<li>resolve</li>
-<li>reject</li>
-</ul>
-
+      
+    <div class="collection-year">
+      <span class="collection-header">2023</span>
     </div>
 
-    
-    
-    
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2023-04-25T19:03:37+08:00"
+              content="2023-04-25">
+          04-25
+        </time>
+      </div>
 
-    <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag"># 笔记</a>
-          </div>
+      <div class="post-title">
+          <a class="post-title-link" href="/2023/04/25/Vue%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/" itemprop="url">
+            <span itemprop="name">尚品汇项目笔记</span>
+          </a>
+      </div>
 
-        
-
-          <div class="post-nav">
-            <div class="post-nav-item">
-            </div>
-            <div class="post-nav-item">
-                <a href="/2023/01/02/hello-world/" rel="next" title="你好 远">
-                  你好 远 <i class="fa fa-chevron-right"></i>
-                </a>
-            </div>
-          </div>
-    </footer>
+      
+    </header>
   </article>
-</div>
 
 
-
-
-
+    </div>
+  </div>
+  
+  
+  
 
 </div>
   </main>

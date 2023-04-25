@@ -120,7 +120,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -153,6 +153,120 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/25/Vue%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="远">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="远的个人博客">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 远的个人博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/04/25/Vue%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/" class="post-title-link" itemprop="url">尚品汇项目笔记</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-04-25 19:03:37 / 修改时间：19:06:45" itemprop="dateCreated datePublished" datetime="2023-04-25T19:03:37+08:00">2023-04-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Vue/" itemprop="url" rel="index"><span itemprop="name">Vue</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>注意:组件通信在你们将来面试的时候出现频率超级高。、</p>
+<p>前面基础的时候：组件通信讲了6种？</p>
+<p>组件通信方式1：props<br>使用场景:[父子通信]</p>
+<p>传递数据类型：<br>1:可能是函数  ———–实质子组件想给父亲传递数据<br>2:可能不是函数———–实质就是父亲给子组件传递数据<br><TodoList :todos="123"  updateChecked="hander"></p>
+<p>特殊情况：路由传递props<br>1:布尔值类型，把路由中params参数映射为组件props数据<br>2:对象，静态数据，很少用<br>3:函数，可以把路由中params|query参数映射为组件props数据</p>
+<p>组件通信方式2:自定义事件   $emit  $on[简写@]<br>事件:原生DOM事件—-【click|mouseenter……..】<br>事件：自定义事件—–[子给父传递数据]</p>
+<p>组件通信方式3：$bus 全局事件总线—-【万能】<br>组件实例的原型的原型指向的Vue.prototype</p>
+<p>组件通信方式4：pubsub-js【发布订阅消息】*****在vue中根本不用【React】 —-万能</p>
+<p>组件通信方式5:Vuex[仓库]  —–数据非持久化—-万能的</p>
+<p>核心概念：5<br>state<br>mutations<br>actions<br>getters<br>modules</p>
+<p>组件通信方式6：插槽—–父子通信【结构】<br>slot</p>
+<p>默认插槽<br>具名插槽<br>作用域插槽:子组件的数据来源于父组件，但是子组件的自己的结构有父亲决定。</p>
+<p>watch|computed|method区别?<br>{<br>    name:’王二麻子’,<br>    eat:function(){</p>
+<pre><code>&#125;
+</code></pre>
+<p>}</p>
+<p>1:事件相关的深入学习</p>
+<p>事件:事件已经学习过两种，第一种原生DOM事件，第二种自定义事件。</p>
+<p>&lt;Event1 @click&#x3D;”handler1”&gt;</Event1><br>组件绑定原生DOM事件，并非原生DOM事件，而是所谓的自定义事件。<br>如果你想把自定义事件变为原生DOM事件，需要加上修饰符.native修饰<br>这个修饰符，可以把自定义事件【名字：原生DOM类型的】变为原生DOM事件，</p>
+<p>7:v-model实现组件通信？</p>
+<p>v-model：指令，可以收集表单数据【text、radio、checkbox、range】等等<br>切记：v-model收集checkbox需要用数组收集</p>
+<p>v-model:实现原理   :value  @input  还可以实现父子数据同步。<br><CustomInput v-model="msg"></CustomInput></p>
+<p>8:属性修饰符.sync，可以实现父子数据同步。<br>以后在elementUI组件中出现，实现父子数据同步。</p>
+<p>9：$attrs与$listeners   —-vue-helper  父子组件通信<br>$attrs：组件实例的属性，可以获取到父亲传递的props数据（前提子组件没有通过props接受）<br>$listeners：组件实例的属性，可以获取到父亲传递自定义事件（对象形式呈现）</p>
+<p>10:$children与$parent       可以实现父子组件通信<br>ref:可以在父组件内部获取子组件—实现父子通信<br>$children:可以在父组件内部获取全部的子组件【返回数组】<br>$parent:可以在子组件内部获取唯一的父组件【返回组件实例】</p>
+<p>第一种:props —-父子<br>1:父子通信，props只读的<br>2：写法三种【todos】 {todos：Array} {todos：{type:Arrat,default:[]}}<br>3：路由props</p>
+<p>第二种:自定义事件<br>1：子给父传递数据<br>2：两种【简单写法|复杂写法】<br>&lt;Todos @erha&#x3D;”handler”&gt;<br><Todos ref='erha'><br>mounted(){<br>  this.$refs.erha.$on(‘xx’,callBack)<br>}</p>
+<p>3:全局事件总线  —万能</p>
+<p>4：pubsub-js——万能</p>
+<p>5：vuex——万能</p>
+<p>6：v-model</p>
+<p>7：.sync</p>
+<p>8:$attrs|$listeners</p>
+<p>9:$children|$parent    —-ref</p>
+<p>10插槽 ——用于插槽<br>插槽：父子组件通信（HTML结构）<br>插槽slot：<br>默认插槽|具名插槽|作用于插槽</p>
+<p>作用域插槽:子组件的数据来源于父组件，但是子组件决定不了自身结构与外观。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -421,7 +535,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-04-24 17:09:08" itemprop="dateModified" datetime="2023-04-24T17:09:08+08:00">2023-04-24</time>
+      <time title="修改时间：2023-04-25 19:18:47" itemprop="dateModified" datetime="2023-04-25T19:18:47+08:00">2023-04-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -472,19 +586,21 @@
 <h2 id="mock数据-模拟"><a href="#mock数据-模拟" class="headerlink" title="mock数据(模拟)"></a>mock数据(模拟)</h2><p>使用mock：<br>1.下载插件 npm install mockjs<br>2.在项目当中src文件夹中创建mock文件夹<br>3.在mock文件夹下准备JSON数据(记得格式化)<br>4.把mock数据需要的图片放到public文件夹中(在打包的时候public会原封不动的打包到dist文件夹中)<br>5.创建mockServe.js通过mockjs插件实现模拟数据<br>6.mockServe.js文件在入口文件中引入(至少需要执行一次，才能模拟数据)</p>
 <h2 id="swiper技术的使用"><a href="#swiper技术的使用" class="headerlink" title="swiper技术的使用"></a>swiper技术的使用</h2><p>1.引包(js和css)文件，npm使用：npm i swiper@5<br>2.页面结构必须要有<br>3.必须在页面结构中有的情况下，再初始化Swiper</p>
 <h2 id="vue-nextTick"><a href="#vue-nextTick" class="headerlink" title="vue.nextTick"></a>vue.nextTick</h2><p>nextTick：在下次 DOM 更新循环结束之后执行延迟回调。在修改数据之后立即使用这个方法，获取更新后的 DOM。<br>nextTick：可以保证页面中的解构一定有的，经常和很多插件一样使用(都需要DOM存在)<br>v-for也可以在自定义标签当中使用</p>
-<h2 id="组件通信的方式-面试频率高"><a href="#组件通信的方式-面试频率高" class="headerlink" title="组件通信的方式(面试频率高)"></a>组件通信的方式(面试频率高)</h2><p>消息订阅发布（全能） ：，<br>全局事件总线（全能）：this.$bus.$emit（自定义名字）<br>this.$bus.$on(“自定义名字”,()&#x3D;&gt;{</p>
-<p>})<br>props（父传子组件通信）：:属性名&#x3D;”属性值”，props使用的是属性名(写法：数组，对象，函数)<br>自定义事件（子传父通信）：@自定义名称 @emit，<br>插槽：，<br>vuex：，</p>
+<h2 id="组件通信的方式-面试频率高"><a href="#组件通信的方式-面试频率高" class="headerlink" title="组件通信的方式(面试频率高)"></a>组件通信的方式(面试频率高)</h2><p>1.消息订阅发布（全能） ：，<br>2.全局事件总线（全能）：this.$bus.$emit（自定义名字）<br>this.$bus.$on(“自定义名字”,()&#x3D;&gt;{</p>
+<p>})<br>3.props（父传子组件通信）：:属性名&#x3D;”属性值”，props使用的是属性名(写法：数组，对象，函数)<br>4.自定义事件（子传父通信）：@自定义名称 @emit，<br>5.插槽：，<br>6.vuex：，</p>
 <h2 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h2><p>升序就是从小到大。<br>降序就是从大到小。</p>
 <h2 id="分页器"><a href="#分页器" class="headerlink" title="分页器"></a>分页器</h2><p>1.为什么需要分页器?<br>当后台传入了大量的数据，那么在前端拿到数据，如果直接展示很有可能或造成卡顿，同时消耗过多的内存，给用户带来的浏览效果就不好。<br>2.需要知道什么?<br>需要知道当前是第几个：pageNo字段代表当前页数<br>需要知道每一页需要展示多少条数据：pageSize字段进行代表<br>需要知道整个分页器一共有多少条数据：total字段进行代表<br>需要知道分页器连续页码个数：continues字段进行代表<br>为什么是5 | 7[奇数]?因为对称好看<br>3.总页数(totalPage)&#x3D;总数据量&#x2F;每页展示数量<br>重要的地方：计算出连续页面起始数字和结束数字</p>
 <h2 id="存储"><a href="#存储" class="headerlink" title="存储"></a>存储</h2><p>浏览器存储功能：HTML5中新增的<br>本地存储：持久化(5M)，<br>会话存储(用于一些简单的数据)：页面关闭，数据消失<br>一般存储的是字符串</p>
 <h2 id="登录业务"><a href="#登录业务" class="headerlink" title="登录业务"></a>登录业务</h2><p>1.注册：通过数据库存储用户的信息(名字，密码)<br>2.token(令牌：唯一标识符)<br>3.登录：登录成功的时候，后台为了区分用户是谁，服务器会发送一个token(令牌)，前台持久化存储(带着token找服务器要用户信息进行展示)</p>
 <h2 id="导航守卫"><a href="#导航守卫" class="headerlink" title="导航守卫"></a>导航守卫</h2><p>1.导航：表示路由正在发生变化，进行路由跳转<br>2.守卫：满足条件放行<br>3.全局守卫：全局解析守卫，全局后置守卫。<br>3.1.全局前置守卫(<br>to：获取跳转到那个路由的信息<br>from：可以获取到从那个路由来的<br>next：放行函数，使用：1.next()放行，2.next(“&#x2F;login”)放行到什么地方，3.next(false)此路不通，原路返回)<br>4.路由独享的守卫：<br>5.组件内的守卫：</p>
 <h2 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h2><p>不能在生命周期函数中使用async、await<br>因为加了async  周期函数 就不是同步的  变成异步函数  生命周期就无法按照预定顺序完成  造成非预期的效果</p>
-<h2 id="图片懒加载"><a href="#图片懒加载" class="headerlink" title="图片懒加载"></a>图片懒加载</h2><p>npm i <a href="mailto:&#118;&#x75;&#101;&#45;&#108;&#x61;&#x7a;&#x79;&#108;&#111;&#97;&#100;&#x40;&#x31;&#46;&#51;&#x2e;&#x33;">&#118;&#x75;&#101;&#45;&#108;&#x61;&#x7a;&#x79;&#108;&#111;&#97;&#100;&#x40;&#x31;&#46;&#51;&#x2e;&#x33;</a></p>
+<h2 id="图片懒加载"><a href="#图片懒加载" class="headerlink" title="图片懒加载"></a>图片懒加载</h2><p>npm i <a href="mailto:&#x76;&#x75;&#x65;&#x2d;&#108;&#x61;&#122;&#121;&#x6c;&#111;&#x61;&#100;&#x40;&#x31;&#x2e;&#x33;&#x2e;&#51;">&#x76;&#x75;&#x65;&#x2d;&#108;&#x61;&#122;&#121;&#x6c;&#111;&#x61;&#100;&#x40;&#x31;&#x2e;&#x33;&#x2e;&#51;</a></p>
 <h2 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h2><p>vue插件暴露的是一个对象</p>
 <h2 id="正则插件使用"><a href="#正则插件使用" class="headerlink" title="正则插件使用"></a>正则插件使用</h2><p>npm i vee-validate@2 –save</p>
 <h2 id="路由懒加载"><a href="#路由懒加载" class="headerlink" title="路由懒加载"></a>路由懒加载</h2><p>当打包构建应用时，JavaScript 包会变得非常大，影响页面加载。如果我们能把不同路由对应的组件分割成不同的代码块，然后当路由被访问的时候才加载对应组件，这样就更加高效了。<br>使用：component: () &#x3D;&gt; import(‘路由’),</p>
 <h2 id="打包上线"><a href="#打包上线" class="headerlink" title="打包上线"></a>打包上线</h2><p>打包：npm run build<br>map文件是用来找bug的，项目不需要可以清除<br>清除Map文件<br>productionSourceMap:false</p>
+<h2 id="linux基本操作"><a href="#linux基本操作" class="headerlink" title="linux基本操作"></a>linux基本操作</h2><p>1.&#x2F;根目录<br>2.cd：跳转目录<br>3.ls： 查看<br>4.mkdir：创建目录<br>4.pwd：查看绝对路径</p>
+<h2 id="nginx方向代理"><a href="#nginx方向代理" class="headerlink" title="nginx方向代理"></a>nginx方向代理</h2><p>1.进入etc目录，安装nginx：yum install nginx</p>
 
       
     </div>

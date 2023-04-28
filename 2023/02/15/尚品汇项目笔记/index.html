@@ -27,7 +27,7 @@
 <meta property="og:description" content="项目配置分析node_modules文件夹:项目依赖文件夹。public文件夹:一般放置一些静态资源(图片)，需要注意，放在public文件夹中的静态资源，webpack进行打包的时候会原封不动打包到dist文件夹中。src文件夹(源代码文件夹):assets文件夹:一般也是放置静态资源(一般放置多个组件共用的静态资源)，需要注意，放置在assest文件夹里面静态资源，webpack进行打包的时候">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-02-15T13:12:59.985Z">
-<meta property="article:modified_time" content="2023-04-25T11:18:47.178Z">
+<meta property="article:modified_time" content="2023-04-27T00:48:16.075Z">
 <meta property="article:author" content="远">
 <meta property="article:tag" content="笔记">
 <meta name="twitter:card" content="summary">
@@ -126,7 +126,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -137,7 +137,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -205,7 +205,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-04-25 19:18:47" itemprop="dateModified" datetime="2023-04-25T19:18:47+08:00">2023-04-25</time>
+      <time title="修改时间：2023-04-27 08:48:16" itemprop="dateModified" datetime="2023-04-27T08:48:16+08:00">2023-04-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -264,7 +264,7 @@
 <h2 id="登录业务"><a href="#登录业务" class="headerlink" title="登录业务"></a>登录业务</h2><p>1.注册：通过数据库存储用户的信息(名字，密码)<br>2.token(令牌：唯一标识符)<br>3.登录：登录成功的时候，后台为了区分用户是谁，服务器会发送一个token(令牌)，前台持久化存储(带着token找服务器要用户信息进行展示)</p>
 <h2 id="导航守卫"><a href="#导航守卫" class="headerlink" title="导航守卫"></a>导航守卫</h2><p>1.导航：表示路由正在发生变化，进行路由跳转<br>2.守卫：满足条件放行<br>3.全局守卫：全局解析守卫，全局后置守卫。<br>3.1.全局前置守卫(<br>to：获取跳转到那个路由的信息<br>from：可以获取到从那个路由来的<br>next：放行函数，使用：1.next()放行，2.next(“&#x2F;login”)放行到什么地方，3.next(false)此路不通，原路返回)<br>4.路由独享的守卫：<br>5.组件内的守卫：</p>
 <h2 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h2><p>不能在生命周期函数中使用async、await<br>因为加了async  周期函数 就不是同步的  变成异步函数  生命周期就无法按照预定顺序完成  造成非预期的效果</p>
-<h2 id="图片懒加载"><a href="#图片懒加载" class="headerlink" title="图片懒加载"></a>图片懒加载</h2><p>npm i <a href="mailto:&#x76;&#x75;&#x65;&#x2d;&#108;&#x61;&#122;&#121;&#x6c;&#111;&#x61;&#100;&#x40;&#x31;&#x2e;&#x33;&#x2e;&#51;">&#x76;&#x75;&#x65;&#x2d;&#108;&#x61;&#122;&#121;&#x6c;&#111;&#x61;&#100;&#x40;&#x31;&#x2e;&#x33;&#x2e;&#51;</a></p>
+<h2 id="图片懒加载"><a href="#图片懒加载" class="headerlink" title="图片懒加载"></a>图片懒加载</h2><p>npm i <a href="mailto:&#x76;&#117;&#x65;&#x2d;&#108;&#x61;&#122;&#121;&#108;&#111;&#97;&#x64;&#x40;&#x31;&#46;&#x33;&#46;&#51;">&#x76;&#117;&#x65;&#x2d;&#108;&#x61;&#122;&#121;&#108;&#111;&#97;&#x64;&#x40;&#x31;&#46;&#x33;&#46;&#51;</a></p>
 <h2 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h2><p>vue插件暴露的是一个对象</p>
 <h2 id="正则插件使用"><a href="#正则插件使用" class="headerlink" title="正则插件使用"></a>正则插件使用</h2><p>npm i vee-validate@2 –save</p>
 <h2 id="路由懒加载"><a href="#路由懒加载" class="headerlink" title="路由懒加载"></a>路由懒加载</h2><p>当打包构建应用时，JavaScript 包会变得非常大，影响页面加载。如果我们能把不同路由对应的组件分割成不同的代码块，然后当路由被访问的时候才加载对应组件，这样就更加高效了。<br>使用：component: () &#x3D;&gt; import(‘路由’),</p>
